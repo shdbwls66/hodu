@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HODU</title>
+    <link rel="icon" href="image/catFace.png" type="image/x-icon">
+    <link rel="stylesheet" href="HODUstyle.css">
+</head>
+<body class="cont">
+    <!--헤더-->
+    <header class="header">
+        <!--헤더 윗부분-->
+        <div class="headerBar">
+            <a class="hodu_link" href=""><img class="hodu_logo" src="image/hodu_logo.png" alt="메인페이지이동"></a>
+            <nav class="menu">
+                <a class="Home" href="">Home</a>
+                <a class="About" href="">About</a>
+                <a class="Support" href="">Support</a>
+            </nav>
+            <button id="barDownBtn" class="btn">Download</button>
+        </div>
+
+        <!--헤더 밑부분-->
+        <div class="headerCont">
+            <div class="headerText">
+                <h1 class="headerTitle">
+                    Lorem Ipsum is simply<br>
+                    dummy text of the printing and
+                </h1>
+                <div class="headerP">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry.
+                    </p>
+                    <p>
+                        Lorem Ipsum has been the industry's standard dummy text
+                        ever since the 1500s, when an unknown
+                    </p>
+                </div>
+                <button id="contDownBtn" class="btn">Download</button>
+            </div>
+            <img class="catBox" src="image/cat_box.png" alt="">
+        </div>
+    </header>
+
+    <!--메인-->
+    <main class="main">
+        <img class="cat_mainTop" src="image/cat_maintop.png" alt="">
+        <h2 class="mainTitle">
+            Lorem Ipsum is simply
+            dummy text of the printing
+            and dummy text
+        </h2>
+        <p class="mainP">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+        </p>
+
+        <!--주 컨텐츠-->
+        <article class="catCont">
+            <h3 class="catCont_title">dummy text of the printing and dummy</h3>
+            <p class="catCont_p">
+                Lorem Ipsum is simply <strong>dummy text</strong> of the printing and typesetting industry.
+            </p>
+            <p class="catCont_p">
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+            </p>
+            <ul class="catImage">
+                <li><img src="image/cat1_img.png" alt="catImage"></li>
+                <li><img src="image/cat2_img.png" alt="catImage"></li>
+                <li><img src="image/cat3_img.png" alt="catImage"></li>
+                <li><img src="image/cat4_img.png" alt="catImage"></li>
+                <li><img src="image/cat5_img.png" alt="catImage"></li>
+                <li><img src="image/cat6_img.png" alt="catImage"></li>
+            </ul>
+            <p class="show_more">Continue exploring HODU</p>
+            <button id="showMoreBtn" class="btn">Show more</button>
+        </article>
+        <hr/>
+    </main>
+
+    <!--aside-->
+    <aside>
+        <section class="location">
+            <h3 class="location_title">Where you'll be</h3>
+            <p class="location_p">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
+            <div id="map"></div>
+        </section>
+
+        <!--구독 박스-->
+        <form class="subscribe_box" action="" method="post">
+            <div class="subscribe_text">
+                <h3 class="subscribe_title">Subscribe to our Blog post</h3>
+                <p class="subscribe_p">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text
+                </p>
+            </div>
+            <div class="email_box">
+                <img class="email_logo" src="image/mail.png" alt="">
+                <input id="email" type="email" placeholder="Enter your e-mail address">
+                <button id="subscribeBtn" class="btn">Subscribe</button>
+            </div>
+        </form>
+
+        <!--모달-->
+        <div id="myModal" class="modal">
+            <div class="modalContent">
+                <img class="catFace" src="image/catFace.png" alt="">
+                <h3 class="modalTitle">Thank you!</h3>
+                <p class="modalP">Lorem Ipsum is simply dummy text of the printing industry.</p>
+                <button id="modalBtn" class="btn">OK! I Love HODU</button>
+            </div>
+        </div>
+
+        <div class="catBackground">
+            <img src="image/cat_background.png" alt="">
+        </div>
+
+        <button id="scrollBtn">
+            <img src="image/scroll-top-btn.png" alt="스크롤 맨 위로">
+            <img src="image/scroll-top-btn2.png" alt="스크롤 맨 위로">
+        </button>
+    </aside>
+
+    <!--footer-->
+    <footer class="footer">
+        <a href=""><img class="hodu_logo2" src="image/hodu_logo.png" alt="메인페이지이동"></a>
+        <nav class="sns_link">
+            <a href=""><img class="blog" src="image/icon-blog.png" alt="블로그이동"></a>
+            <a href=""><img class="instagram" src="image/icon-insta.png" alt="인스타그램이동"></a>
+            <a href=""><img class="facebook" src="image/icon-facebook.png" alt="페이스북이동"></a>
+            <a href=""><img class="youtube" src="image/icon-youtube.png" alt="유튜브이동"></a>
+        </nav>
+    </footer>
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ab20547f349506662536582357e6b8fe"></script>
+    <script>
+        //지도
+        const mapContainer = document.getElementById('map'),
+            mapOption = {
+                center: new kakao.maps.LatLng(33.4425, 126.5715), // 지도의 중심좌표
+                level: 2 // 지도의 확대 레벨
+            };
+
+        const map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+        // 마커가 표시될 위치입니다
+        const markerPosition  = new kakao.maps.LatLng(33.4425, 126.5715);
+
+        // 마커를 생성합니다
+        const marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+
+        // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+        const mapTypeControl = new kakao.maps.MapTypeControl();
+
+        // kakao.maps.ControlPosition은 컨트롤이 표시될 위치 정의
+        map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+        // 줌 컨트롤을 생성
+        const zoomControl = new kakao.maps.ZoomControl();
+        map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+        // Show More 버튼
+        const catImage = document.querySelector('.catImage');
+        const showMoreBtn = document.getElementById('showMoreBtn');
+        let skip = 0;
+
+        showMoreBtn.addEventListener('click', ()=>{fetchImages(skip+=3)});
+
+        //데이터 불러오기
+        async function fetchImages(skip){
+            try{
+                const response = await fetch(`https://cataas.com/api/cats?limit=3&skip=${skip}`);
+                if(!response.ok){
+                    throw new Error('네트워크에 문제가 있습니다.');
+                }
+
+                const cats = await response.json();
+                console.log(cats);
+                makeImageList(cats);
+            }catch(error){
+                console.error(error);
+            }
+        }
+
+        //불러온 데이터 출력
+        function makeImageList(cats){
+            cats.forEach((cats)=>{
+                catImage.insertAdjacentHTML("beforeend", `<li><img src="https://cataas.com/cat/${cats._id}" alt="catImage"></li>`)
+            })
+        }
+
+        //모달
+        const modal = document.querySelector('.modal');
+        const modalBtn = document.querySelector('#modalBtn');
+        const subscribeBtn = document.querySelector('#subscribeBtn');
+
+        subscribeBtn.addEventListener('click', (event)=>{
+            modal.style.display = 'flex';
+            event.preventDefault()
+        })
+        modalBtn.addEventListener('click', ()=>{
+            modal.style.display = 'none';
+
+        })
+
+        //스크롤바
+        const scrollTop = document.querySelector('#scrollBtn');
+
+        scrollTop.addEventListener('click', () => {
+            window.scroll({
+                top: 0, left: 0, behavior: "smooth"
+            })
+        })
+    </script>
+</body>
+</html>
