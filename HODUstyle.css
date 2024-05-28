@@ -79,11 +79,10 @@ header.header{
     padding-top: 32px;
 }
 /* 메인 */
-.main{
+.mainTop{
     padding: 0 320px;
     text-align: left;
 }
-
 .cat_mainTop{
     width: 660px;
     height: 390px;
@@ -99,6 +98,7 @@ header.header{
 }
 /*고양이 컨텐츠*/
 .catCont{
+    padding: 0 320px;
     text-align: center;
 }
 .catCont_title{
@@ -152,7 +152,10 @@ hr{
 }
 
 /*위치*/
-
+.location, .subscribe_box{
+    margin: 320px;
+    text-align: left;
+}
 .location_title{
     font-size: 36px;
     line-height: 45px;
@@ -221,9 +224,9 @@ hr{
 
 /*하단 고양이 배경*/
 .catBackground{
-    width: 1920px;
+    width: 100%;
     height: 340px;
-    margin-top: -100px;
+    margin-top: -420px;
     overflow: hidden;
 }
 .catBackground img{
