@@ -142,6 +142,7 @@ header.header{
     font-size: 16px;
     padding: 15px 29px;
 }
+
 /*선*/
 hr{
     height: 1px;
@@ -151,18 +152,18 @@ hr{
 }
 
 /*위치*/
-.location, .subscribe_box{
-    margin: 0 320px;
-}
+
 .location_title{
     font-size: 36px;
     line-height: 45px;
+    text-align: left;
     color: black;
 }
 .location_p{
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
+    text-align: left;
     padding: 20px 0 48px 0;
     color: #606367;
 }
@@ -171,9 +172,6 @@ hr{
     height:520px;
     border-radius: 12px;
     margin-bottom: 80px;
-}
-aside{
-    position: relative;
 }
 /*구독박스*/
 .subscribe_box{
@@ -259,6 +257,7 @@ aside{
     display: none;
 }
 
+/*footer*/
 .footer{
     display: flex;
     justify-content: space-between;
